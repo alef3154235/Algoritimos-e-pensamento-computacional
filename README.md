@@ -2,7 +2,6 @@
 
 Me chamo **Alef**, sou aluno do curso de **Ciências da Computação**, e aqui segue o meu projeto em formato **.txt**.
 
-dupla: Alef e Adriell
 ---
 
 ## 📌 Sobre o projeto
@@ -12,4 +11,4 @@ O arquivo enviado contém o código solicitado na atividdade, desenvolvido de fo
 
 Obrigado pela atenção!  
 **Alef**
-Alef e adriell 
+
