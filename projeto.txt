@@ -1,0 +1,344 @@
+etapa 1:#include <stdio.h>
+
+
+
+int main() {
+
+  char nome[50];
+
+  int codigo;
+
+  int quantidade;
+
+
+
+  printf("Digite o nome do produto: ");
+
+  scanf("%s", nome);
+
+
+
+  printf("Digite o codigo do produto: ");
+
+  scanf("%d", &codigo);
+
+
+
+  printf("Digite a quantidade: ");
+
+  scanf("%d", &quantidade);
+
+
+
+  printf("\nDados do Produto\n");
+
+  printf("Nome: %s\n", nome);
+
+  printf("Codigo: %d\n", codigo);
+
+  printf("Quantidade: %d\n", quantidade);
+
+
+
+  return 0;
+
+}
+
+
+
+etapa 2: #include <stdio.h>
+
+
+
+int main() {
+
+  int quantidade, minimo;
+
+  int opcao;
+
+
+
+  printf("Quantidade em estoque: ");
+
+  scanf("%d", &quantidade);
+
+
+
+  printf("Estoque minimo: ");
+
+  scanf("%d", &minimo);
+
+
+
+  printf("\nEscolha uma opcao:\n");
+
+  printf("1 - Verificar estoque\n");
+
+  printf("2 - Sair\n");
+
+  printf("Opcao: ");
+
+  scanf("%d", &opcao);
+
+
+
+  switch (opcao) {
+
+    case 1:
+
+      if (quantidade < minimo) {
+
+        printf("ALERTA: Necessario repor o estoque!\n");
+
+      } else {
+
+        printf("Estoque suficiente.\n");
+
+      }
+
+      break;
+
+
+
+    case 2:
+
+      printf("Saindo\n");
+
+      break;
+
+
+
+    default:
+
+      printf("Opcao invalida.\n");
+
+  }
+
+
+
+  return 0;
+
+}
+
+
+
+eatapa 3: #include <stdio.h>
+
+
+
+int main() {
+
+  int quantidade = 0;
+
+  int opcao, valor;
+
+
+
+  while (1) {
+
+    printf("\n1 - Entrada de estoque\n");
+
+    printf("2 - Saida de estoque\n");
+
+    printf("3 - Mostrar estoque\n");
+
+    printf("0 - Sair\n");
+
+    scanf("%d", &opcao);
+
+
+
+    if (opcao == 0)
+
+      break;
+
+
+
+    if (opcao == 1) {
+
+      printf("Adicionar: ");
+
+      scanf("%d", &valor);
+
+      quantidade += valor;
+
+    }
+
+
+
+    if (opcao == 2) {
+
+      printf("Remover: ");
+
+      scanf("%d", &valor);
+
+      quantidade -= valor;
+
+    }
+
+
+
+    if (opcao == 3) {
+
+      printf("Estoque atual: %d\n", quantidade);
+
+    }
+
+  }
+
+
+
+  return 0;
+
+}
+
+
+
+etapa 4:#include <stdio.h>
+
+
+
+struct Produto {
+
+  char nome[50];
+
+  int codigo;
+
+  int quantidade;
+
+};
+
+
+
+int main() {
+
+  struct Produto lista[3];
+
+  int i;
+
+
+
+  for (i = 0; i < 3; i++) {
+
+    printf("Nome: ");
+
+    scanf("%s", lista[i].nome);
+
+
+
+    printf("Codigo: ");
+
+    scanf("%d", &lista[i].codigo);
+
+
+
+    printf("Quantidade: ");
+
+    scanf("%d", &lista[i].quantidade);
+
+  }
+
+
+
+  printf("\n Produtos Cadastrados \n");
+
+
+
+  for (i = 0; i < 3; i++) {
+
+    printf("%s | Cod: %d | Quant: %d\n",
+
+      lista[i].nome,
+
+      lista[i].codigo,
+
+      lista[i].quantidade
+
+    );
+
+  }
+
+
+
+  return 0;
+
+}
+
+
+
+etapa 5:#include <stdio.h>
+
+
+
+int estoque = 0;
+
+
+
+void entradaEstoque() {
+
+  int v;
+
+  printf("Adicionar: ");
+
+  scanf("%d", &v);
+
+  estoque += v;
+
+}
+
+
+
+void saidaEstoque() {
+
+  int v;
+
+  printf("Remover: ");
+
+  scanf("%d", &v);
+
+  estoque -= v;
+
+}
+
+
+
+void consultar() {
+
+  printf("Estoque atual: %d\n", estoque);
+
+}
+
+
+
+int main() {
+
+  int opcao;
+
+
+
+  while (1) {
+
+    printf("\n1-Entrada\n2-Saida\n3-Consulta\n0-Sair\n");
+
+    scanf("%d", &opcao);
+
+
+
+    if (opcao == 0) break;
+
+
+
+    if (opcao == 1) entradaEstoque();
+
+    if (opcao == 2) saidaEstoque();
+
+    if (opcao == 3) consultar();
+
+  }
+
+
+
+  return 0;
+
+}
+
